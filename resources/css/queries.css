@@ -1,0 +1,131 @@
+/*----------------------------------------------------*/
+/*Big tablet to 1200px (width smaller the 1140px row) */
+/*----------------------------------------------------*/
+@media only screen and (max-width: 1200px){
+    .hero-text-box{
+        width:100%;
+        padding:0 2%;
+    }
+    .row{ padding: 0 2%;}
+}
+
+
+/*------------------------------------------*/
+/*small tablet to big tablet: 768px ~1023px */
+/*------------------------------------------*/
+@media only screen and (max-width: 1023px){
+    body{font-size: 18px;}
+    section{padding: 60px 0;}
+
+    .steps-box{margin-top: 10px;}
+    .steps-box:last-child{margin-top: 10px;}
+    .works-steps{margin-bottom: 40px;}
+    .work-step:last--of-type{margin-bottom: 60px}
+    
+    .logo:{
+        margin-top: 30px;
+        width: 100px;
+    }
+    
+    .pic img{
+        width: 60%;}
+
+    
+    .works-step div{
+        margin: 10px 0px;
+        font-size:120%;
+        padding-top:1%;
+        height: 35px;
+        width:35px;
+    }
+
+    .works-step p{
+        display:inline-block;
+        font-size:125%;
+        padding: 2px;
+        margin:  12px 0px 12px 10px;
+    }
+    
+    .btn-app img{
+        height: 40px;
+        padding-left: 8%;
+    }
+
+    .plan-price{
+        font-size: 200%;
+        margin-bottom: 10px;
+    }
+}
+
+/*-------------------------------------------*/
+/*small phones to small tablet: 481px ~767px */
+/*-------------------------------------------*/
+@media only screen and (max-width: 767px){
+    body{ font-size: 18px;}
+    section{padding: 30px 0;}
+    
+    .row,
+    .hero-text-box{padding: 0 4%;}
+    
+    .main-nav{
+        display: none;
+        text-align: left;
+        width: 105px;
+        float: left;
+        margin-left: 30px;
+    }
+    
+    .mobile-nav-icon{
+        display: inline-block;
+    }
+    
+    .mobile-nav-icon li{
+        display: block;
+    }
+    
+    .main-nav li a:link,
+    .main-nav li a:visited{
+        border: 0px;
+        display:block;
+    }
+
+    
+    .pic{text-align: center}
+    .pic img{
+        width: 30%;}
+    
+    
+    
+    .col {
+        width: 100%;
+        height: auto;
+        margin: 1% 0%;
+    }
+    
+    
+    
+    footer{
+        padding: 10px;
+    }
+    
+    .footer-nav,
+    .social-links{
+        font-size: 90%;
+        float:none;
+        text-align: center;
+    }
+    
+    footer p{
+        font-size: 60%;
+    }
+}
+
+/*-------------------------*/
+/*small phones: 0 to 480px */
+/*-------------------------*/
+@media only screen and (max-width: 510px){
+    section{
+        padding: 25px 0;
+    }
+    .contact-form{width: 100%;}
+}

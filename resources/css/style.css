@@ -1,0 +1,671 @@
+/*------------------------------------------*/
+/* Basic Setup */
+/*------------------------------------------*/
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+*:focus{outline: none;}
+
+html,body{
+    background-color: #fff;
+    color: #555;
+    font-family: 'Lato', 'Arial', sans-serif;
+    font-weight: 400;
+    font-size: 20px;
+    text-rendering: optimizeLegibility;
+    overflow-x: hidden;
+}
+
+/*------------------------------------------*/
+/* REUSEABLE COMPONENTS */
+/*------------------------------------------*/
+
+.row{
+    padding:1%;
+    margin: 30 auto;
+}
+
+.section{
+    padding: 80px 0;
+}
+
+.span_1_of_4 p{
+    font-size:90%;
+    line-height: 145%;
+    width: 90%;
+}
+
+
+/*------------- HEADINGS -------------*/
+
+h1,h2{
+    font-weight: 400;
+    text-transform: uppercase;  /*To transfer into uppercase*/
+}
+
+h1{
+    color:#fff;
+    font-size: 240%;        /*To create a relative size*/
+    margin-top: 0;
+    margin-bottom: 20px;
+    word-spacing: 5px;      /*Setting the spaces between words*/
+    letter-spacing: 1px;    /*Setting the spaces between letter*/
+}
+
+h2{
+    font-size: 180%;
+    word-spacing:2px;
+    text-align: center;
+    margin-top: 5%;
+    letter-spacing: 1px;
+}
+
+h3{
+    font-size: 110%;
+    margin-bottom: 10px;
+}
+
+
+h2:after{
+    display:block;
+    height: 2px;
+    background-color:#0178b0;
+    content:"";
+    width:30%;
+    margin:10px auto 20px auto;
+    text-align: center;
+}
+
+/*-------------- ICONS --------------*/
+
+.icon-big{
+    font-size: 250%;
+    color:#19B5FE;
+    margin-bottom: 10px;
+}
+
+.icon-small {
+    color:#19B5FE;
+    margin: 2% 2% 2% 0%; 
+}
+
+
+/*-------------- LINKS --------------*/
+a:link,
+a:visited {
+    color: #19B5FE;
+    text-decoration: none;
+    padding-bottom: 1px;
+    border-bottom: 2px solid #19B5FE;
+    transition: border-bottom 0.3s, color 0.3s ;
+}
+
+a:hover,
+a:active {
+    color: #555;
+    border-bottom: 2px solid transparent;
+}
+
+
+/*-------------- BOTTONS --------------*/
+
+.btn:link,      /*There is not allowed to be space between class and pseudo-class."*/
+.btn:visited,
+input[type=submit]{
+    display: inline-block;
+    padding: 10px 30px;
+    text-decoration: none;
+    font-weight: 400;
+    border-radius: 50px;
+    color: #fff;
+    transition: background-color 0.3s, border 0.3s, color 0.3s ;
+}
+
+
+.btn-full:link,
+.btn-full:visited,
+input[type=submit]{
+    margin-right:15px;
+    background-color: #19B5FE;
+    border: 1px solid #19B5FE;
+}
+
+.btn-ghost:link,
+.btn-ghost:visited{
+    border: 1px solid #19B5FE;
+    color: #19B5FE;
+}
+
+.btn:hover,
+.btn:active,
+input[type=submit]:hover,
+input[type=submit]:active{
+    background-color: #0178b0;
+}
+
+.btn-full:hover,
+.btn-full:active,
+input[type=submit]{
+    border: 1px solid #0178b0;
+}
+
+.btn-ghost:hover,
+.btn-ghost:active{
+    border: 1px solid #0178b0;
+    color: #fff;
+}
+
+/*------------------------------------------*/
+/* Intro */
+/*------------------------------------------*/
+
+.sticky row{
+    padding: 0px;
+    margin: 0px;
+}
+
+header{
+    color: #fff;
+    background-image: linear-gradient(rgba(0,0,0,0.5),rgba(0,0,0,0.5)), 
+    url(img/bg-min.jpg);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed;
+}
+
+.hero-text-box{
+    position: absolute;
+    width: 1140px;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+}
+
+.logo,
+.logo_white{
+    height: 40px;
+    margin: 5px 0px 0px 5px ;
+    float: left;
+}
+
+.logo_white{
+    display:none;
+}
+
+.main-nav{
+    text-align: right;
+    width: 80%; 
+    list-style: none;
+    float: right;
+}
+
+
+.main-nav li{
+    display: inline-block;
+    margin: 8px 3% 1px 3%;
+}
+
+
+.main-nav li a:link,
+.main-nav li a:visited{
+    color: #fff;
+    text-decoration: none;
+    text-transform: uppercase;
+    font-weight: 300;
+    font-size: 15px;
+    padding: 6px 0;
+}
+
+.main-nav li a:hover,
+.main-nav li a:active{
+    border-bottom: 2px solid #0178b0;
+}
+
+
+/*------------ Mobile navi -------------*/
+.mobile-nav-icon{
+    float: right;
+    display: none;
+    margin: 30px;
+    cursor: pointer;
+}
+
+.mobile-nav-icon i{
+    font-size: 200%;
+    color: #fff;
+}
+
+
+/*------------ Sticky navi -------------*/
+.sticky{
+    position: fixed;
+    left:0;
+    top:0;
+    background: #003752;
+    width: 100%;
+    box-shadow: 0 2px 2px #bebebe;
+    z-index:9999;
+}
+
+.sticky main-nav li a:link,
+.sticky main-nav li a:visited{
+    color: #555;
+    padding: 6px 0;
+}
+
+.sticky .logo{display: none;}
+.sticky .logo_white{display: block;}
+
+
+/*------------------------------------------*/
+/* Showcase */
+/*------------------------------------------*/
+
+.section-showcase{
+    padding:0;
+}
+
+.photos-showcase{
+    list-style: none;
+    width:100%;
+}
+
+.photos-showcase li{
+    display: block;
+    float: left;
+    width:25%;
+    background-color:#000;
+    overflow:hidden;
+}
+
+.showcase-photos{
+    margin:0;
+    opacity: 0.6;
+    transform:scale(1.2);
+    transition: transform 0.5s, opacity 0.3s ;*/
+}
+
+.showcase-photos:hover{
+    opacity: 1;
+    transform:scale(1.05);
+}
+
+.showcase-photos img{ 
+    width:100%
+}
+
+.clearfix {zoom: 1;}
+.clearfix:after {
+    content: '.';
+    clear: both;
+    display: block;
+    height: 0;
+    visibility: hidden;
+}
+
+
+/*------------------------------------------*/
+/* HOW TO JOIN US */
+/*------------------------------------------*/
+.section-join{
+    background-color: #f7f4f4;
+}
+
+.pic{
+    text-align:right;
+    padding-top: 30px;
+}
+
+.pic img{
+    width:70%;
+}
+
+.text{
+    text-align:left;
+    margin-top:40px;
+}
+
+.works-step{
+    margin: 40px;
+}
+
+.works-step:last-of-type{
+    margin-bottom: 80px;
+}
+
+.works-step div{
+    display:inline-block;
+    color: #19B5FE;
+    font-size:170%;
+    text-align: center;
+    height: 52px;
+    width:52px;
+    border-radius: 50%;
+    border: 2px solid #19B5FE;
+    float:left;
+    margin: 10px 0px;
+    padding-top:0.5%;
+}
+
+.works-step p{
+    display:inline-block;
+    font-size:150%;
+    padding: 2px;
+    margin:  15px 0px 15px 10px;
+}
+
+
+.btn-app img{
+    height: 50px;
+    width: auto;
+    padding-left: 4%;
+}
+
+
+.btn-app:link,
+.btn-app:visited {
+    border:0 ;
+}
+
+
+
+/*------------------------------------------*/
+/* CITIES */
+/*------------------------------------------*/
+.span_1_of_4 img{
+    width:100%;
+    height: auto;
+}
+
+.span_1_of_4 h3{
+    margin: 2% 0%;
+}
+
+.city-feature i{
+    width: 20px;
+}
+
+
+
+/*------------------------------------------*/
+/* TESTIMONIALS */
+/*------------------------------------------*/
+.section-testimonial{
+    background-image: linear-gradient(to bottom, rgba(0,0,0,0.1),rgba(0,0,0,0.6)), url(img/feedback-min.jpg);
+    background-size:cover;
+    color: #fff;
+    background-attachment: fixed;
+}
+
+blockquote{
+    padding: 2%;
+    font-style: italic;
+    line-height: 145%;
+    position: relative;
+    margin-top: 40px;
+}
+
+blockquote:before{
+    content: "\201C";
+    font-size: 80px;
+    display: block;
+    position: absolute;
+    top: -5px;
+    left: -4px;
+}
+
+cite{
+    font-size:90%;
+    margin-top: 15px;
+    display:block;
+}
+
+cite img{
+    border-radius: 50% ;
+    height: 45px;
+    margin-right: 10px;
+    vertical-align: middle;
+}
+
+
+/*------------------------------------------*/
+/* Price */
+/*------------------------------------------*/
+.section-Price{
+    background-color: #f7f4f4;
+}
+
+.plan-box{
+    background-color: #fff;
+    border-radius: 5%;
+    width:90%;
+    margin-left:5px;
+    box-shadow: 3px 3px 5px #bebebe;
+    animation: bounce;
+}
+
+.plan-box div{
+    padding: 15px;
+    border-bottom: 1px solid #e8e3e3;
+}
+
+.plan-box div:first-child{
+    background-color: #f2eded;
+    border-top-left-radius: 5%;
+    border-top-right-radius: 5%;
+}
+
+.plan-box div:last-child{
+    text-align: center;
+    border: 0;
+}
+
+.plan-price{
+    font-size: 300%;
+    font-weight: 350;
+    margin-bottom: 10px;
+    color:#19B5FE;
+}
+
+.plan-price span{
+    font-size: 30%;
+    font-weight: 400;
+}
+
+.plan-description{
+    font-size: 90%;
+}
+
+.plan-box li{
+    list-style: none;
+    padding: 5px;
+}
+
+
+/*------------------------------------------*/
+/* Registery */
+/*------------------------------------------*/
+.contact-form{
+    width: 70%;
+    margin: 0 auto;
+}
+
+input[type=text],
+input[type=email],
+select,
+textarea{
+    width: 100%;
+    border-radius: 5px;
+    padding: 3px;
+    border: 1px solid #ccc;
+}
+
+input[type=submit]{
+    font-size: 90%;
+    padding: 2% 5%;
+}
+
+textarea{
+    height: 100px;
+}
+
+
+/*------------------------------------------*/
+/* Footer */
+/*------------------------------------------*/
+
+footer{
+    background-color: #003752;
+    padding: 20px;
+    font-size: 80%;
+}
+
+footer p{
+    text-align: center;
+    margin: 1%;
+    color: #19B5FE;
+}
+
+.footer-nav{
+    list-style: none;
+    float: left;
+}
+
+.social-links{
+    list-style: none;
+    float: right;
+}
+
+.footer-nav li,
+.social-links li{
+    display: inline-block;
+    margin-right: 20px;
+}
+
+.footer-nav li:last-child,
+.social-links li:last-child{
+    margin-right: 0;
+}
+
+.footer-nav li a:link,
+.footer-nav li a:visited,
+.social-links li a:link,
+.social-links li a:visited{
+    text-decoration: none;
+    border: 0;
+    color: #19B5FE;
+    transition: color 0.2s;
+}
+
+.footer-nav li a:hover,
+.footer-nav li a:active{
+    color: #fff;
+}
+
+.social-links li a:link,
+.social-links li a:visited{
+    font-size:140%;
+}
+
+#fb-url,
+#google-url,
+#ig-url,
+#twitter-url{
+    transition: color 0.2s;
+}
+
+#fb-url:hover,
+#fb-url:active{
+    color: #3b5998;
+}
+
+#google-url:hover,
+#google-url:active{
+    color: #ea4335;
+}
+
+#ig-url:hover,
+#ig-url:active{
+    color: #c32aa3;
+}
+
+#twitter-url:hover,
+#twitter-url:active{
+    color: #1da1f2;
+}
+
+
+
+/*------------------------------------------*/
+/* GRID */
+/*------------------------------------------*/
+
+/*------------- COLS SETUP--------------*/
+.cols {
+	clear: both;
+	padding: 0px;
+	margin: 0px;
+}
+
+.col {
+	display: block;
+	float:left;
+	margin: 1% 0% 1% 1.8%;
+}
+
+.col:first-child { margin-left: 0; }
+
+.group:before,
+.group:after { content:""; display:table; }
+.group:after { clear:both;}
+
+
+/*------------ GRID OF 4 -------------*/
+.span_1_of_4 {
+	width: 23%;
+}
+.span_2_of_4{
+    width: 49.2%
+}
+.span_3_of_4 {
+	width: 74.6%;
+}
+
+
+/*------------ GRID OF 3 -------------*/
+.span_1_of_3 { 
+    width: 32%; 
+    font-weight: 400;
+}
+
+.span_2_of_3 { 
+    width: 66%; 
+}
+
+/*------------ GRID OF 2 -------------*/
+.span_2_of_2 {
+	width: 100%;
+}
+.span_1_of_2 {
+	width: 48%;
+}
+
+
+/*------------------------------------------*/
+/* Animation */
+/*------------------------------------------*/
+
+.js--wp-1, 
+.js--wp-2,
+.js--wp-3{
+    opacity: 0;
+    animation-duration: 1s;
+}
+
+.js--wp-4{
+    animation-duration: 1s;
+}
