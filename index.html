@@ -34,6 +34,8 @@
         <title>DDDiving</title>
     </head>
     <body>
+            <div id="fb-root"></div>
+            <script async defer crossorigin="anonymous" src="https://connect.facebook.net/zh_TW/sdk.js#xfbml=1&version=v7.0&appId=939495923160353&autoLogAppEvents=1" nonce="cLk9W8nL"></script>
             <header>
                 <nav class="sticky" id="nav_toggle">
                     <div class="row">
@@ -406,6 +408,7 @@
                     </div>
                 </div>
             </section>
+            <div class="fb-login-button" data-size="large" data-button-type="continue_with" data-layout="default" data-auto-logout-link="false" data-use-continue-as="false" data-width=""></div>
             <footer>
                 <div class="row">
                     <div class="cols group">
@@ -445,7 +448,7 @@
     <script>
     window.fbAsyncInit = function() {
         FB.init({
-            appId      : '{your-app-id}',
+            appId      : 'NotificationCollection',
             cookie     : true,
             xfbml      : true,
             version    : '{api-version}'
